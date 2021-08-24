@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pelaporanbakesbangpolmalang" >
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".DashboardUser"
+            android:label="@string/title_activity_dashboard_user"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".DashboardUserActivity"
+            android:label="@string/title_activity_dashboard_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsTestActivity"
+            android:label="@string/title_activity_maps_test" />
+        <activity
+            android:name=".DetailPemberitahuanActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".AddPemberitahuanActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".AddLaporanActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".DetailUserActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".DetailLaporanActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".AddUserActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".UserHomeActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/NoActionBarLightTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoActionBarLightTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".configfile.MyFirebaseInstanceIdService"
+            android:exported="true"
+            tools:ignore="Instantiatable" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".configfile.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
